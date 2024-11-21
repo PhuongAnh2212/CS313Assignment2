@@ -1,6 +1,7 @@
 import os
 import cv2
 from anomalib import TaskType
+print(TaskType)
 from anomalib.deploy import OpenVINOInferencer
 from loguru import logger
 
@@ -9,7 +10,7 @@ def inference():
     model_path = '/home/group2/anomalib/testModel/CS313DeepLearningforAI/content/anomaly_detection/anomalib_weight/weights/openvino/model.bin'  # Path to OpenVINO model
     metadata_path = '/home/group2/anomalib/testModel/CS313DeepLearningforAI/content/anomaly_detection/anomalib_weight/weights/openvino/metadata.json'  # Path to metadata
     test_images_dir = '/home/group2/anomalib/testModel/bottle/test/broken_large'  # Path to test images
-    output_dir = '/home/group2/anomalib/testModel/bottle/test/output'  # Folder where you want to save the output images
+    output_dir = '/home/group2/anomalib/testModel/bottle/output'  # Folder where you want to save the output images
 
     # Create output directory if it doesn't exist
     os.makedirs(output_dir, exist_ok=True)
